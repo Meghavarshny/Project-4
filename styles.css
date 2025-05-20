@@ -1,0 +1,77 @@
+/* Custom styles to complement Bootstrap */
+
+/* Make the balance display more prominent */
+#net-balance.positive {
+    color: var(--bs-success);
+    font-weight: bold;
+}
+
+#net-balance.negative {
+    color: var(--bs-danger);
+    font-weight: bold;
+}
+
+/* Transaction list item styling */
+.transaction-income {
+    border-left: 4px solid var(--bs-success);
+}
+
+.transaction-expense {
+    border-left: 4px solid var(--bs-danger);
+}
+
+/* Summary card styling */
+.summary-card {
+    background-color: rgba(33, 37, 41, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Make form elements stand out a bit more */
+.form-control:focus, .btn:focus {
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-info-rgb), 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/* Animation for new transactions */
+@keyframes highlight {
+    0% { background-color: rgba(var(--bs-primary-rgb), 0.2); }
+    100% { background-color: transparent; }
+}
+
+.highlight {
+    animation: highlight 2s ease-out;
+}
+
+/* Icon styling */
+.action-btn {
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.action-btn:hover {
+    opacity: 0.7;
+}
+
+.edit-btn {
+    color: var(--bs-info);
+}
+
+.delete-btn {
+    color: var(--bs-danger);
+}
